@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AD4-PV-JfY" customClass="HRColorPickerView">
+                                <rect key="frame" x="32" y="103" width="313" height="464"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqh-eQ-JPF" customClass="HRColorInfoView">
+                                        <rect key="frame" x="8" y="10" width="66" height="84"/>
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="66" id="PAB-iP-b3s"/>
+                                            <constraint firstAttribute="height" constant="84" id="iAP-Wd-YGh"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tc4-hI-3El" customClass="HRBrightnessSlider">
+                                        <rect key="frame" x="83" y="65" width="219" height="11"/>
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.61911003490000005" blue="0.62945342689999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="11" id="tFT-9h-SVf"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="brightnessLowerLimit">
+                                                <real key="value" value="0.40000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fn4-Dd-kV6" customClass="HRColorMapView">
+                                        <rect key="frame" x="0.0" y="104" width="315" height="357"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="saturationUpperLimit">
+                                                <real key="value" value="0.94999999999999996"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="tileSize">
+                                                <integer key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PQJ-bJ-XeZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="10"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="dFi-4T-P2Q"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFW-zQ-3Kh">
+                                        <rect key="frame" x="0.0" y="94" width="100" height="10"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="ADG-EZ-kr0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Fn4-Dd-kV6" firstAttribute="top" secondItem="NFW-zQ-3Kh" secondAttribute="bottom" id="7P7-ft-WaL"/>
+                                    <constraint firstItem="Fn4-Dd-kV6" firstAttribute="leading" secondItem="AD4-PV-JfY" secondAttribute="leading" id="7sW-oD-MwD"/>
+                                    <constraint firstItem="PQJ-bJ-XeZ" firstAttribute="height" secondItem="NFW-zQ-3Kh" secondAttribute="height" id="7wv-2J-QwA"/>
+                                    <constraint firstItem="PQJ-bJ-XeZ" firstAttribute="top" secondItem="AD4-PV-JfY" secondAttribute="top" id="Cke-5c-7qs"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fn4-Dd-kV6" secondAttribute="trailing" constant="-2" id="DZa-43-Ccg"/>
+                                    <constraint firstItem="tc4-hI-3El" firstAttribute="left" secondItem="aqh-eQ-JPF" secondAttribute="right" constant="9" id="EVu-TJ-NNZ"/>
+                                    <constraint firstAttribute="right" secondItem="tc4-hI-3El" secondAttribute="right" constant="11" id="NR3-Dh-PpL"/>
+                                    <constraint firstItem="NFW-zQ-3Kh" firstAttribute="leading" secondItem="AD4-PV-JfY" secondAttribute="leading" id="Qcr-i2-sOY"/>
+                                    <constraint firstItem="aqh-eQ-JPF" firstAttribute="top" secondItem="PQJ-bJ-XeZ" secondAttribute="bottom" id="SNb-z7-0mM"/>
+                                    <constraint firstItem="Fn4-Dd-kV6" firstAttribute="top" secondItem="AD4-PV-JfY" secondAttribute="top" priority="250" constant="104" id="Zkn-fv-WZt"/>
+                                    <constraint firstItem="NFW-zQ-3Kh" firstAttribute="top" secondItem="aqh-eQ-JPF" secondAttribute="bottom" id="gcY-tT-JWm"/>
+                                    <constraint firstItem="aqh-eQ-JPF" firstAttribute="leading" secondItem="AD4-PV-JfY" secondAttribute="leading" constant="8" id="hi8-WK-spO"/>
+                                    <constraint firstItem="aqh-eQ-JPF" firstAttribute="bottom" secondItem="tc4-hI-3El" secondAttribute="bottom" constant="18" id="mdX-P8-86C"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fn4-Dd-kV6" secondAttribute="bottom" constant="3" id="nNn-P5-RjH"/>
+                                    <constraint firstItem="PQJ-bJ-XeZ" firstAttribute="leading" secondItem="AD4-PV-JfY" secondAttribute="leading" id="vgQ-z4-evy"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="brightnessSlider" destination="tc4-hI-3El" id="xY8-Gq-4hU"/>
+                                    <outlet property="colorInfoView" destination="aqh-eQ-JPF" id="Uof-VV-dsF"/>
+                                    <outlet property="colorMapView" destination="Fn4-Dd-kV6" id="QyW-sY-hsu"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AD4-PV-JfY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="32" id="JmF-Ml-dus"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AD4-PV-JfY" secondAttribute="bottom" constant="100" id="h7F-Ua-62h"/>
+                            <constraint firstAttribute="trailing" secondItem="AD4-PV-JfY" secondAttribute="trailing" constant="30" id="lWb-od-1Sq"/>
+                            <constraint firstItem="AD4-PV-JfY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="83" id="z77-b1-dYY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorPickerView" destination="AD4-PV-JfY" id="Dz3-iD-ohZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="64.31784107946028"/>
+        </scene>
+    </scenes>
+</document>
